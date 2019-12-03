@@ -12,18 +12,18 @@ module.exports = {
     ]
   ],
   themeConfig: {
-    // 当前项目的github地址
+    smoothScroll: true,
+    // - git仓库和编辑链接
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
     repo: 'tiandashu/hello-vue2',
     repoLabel: '查看源码',
     // 当前项目配套的文档仓库
     docsRepo: 'tiandashu/hello-vue2-doc',
-    // 默认为 "Edit this page"
+    docsDir: 'docs',
     editLinks: true,
-    editLinkText: '帮助我们改善此页面！',
-    smoothScroll: true,
-    lastUpdated: 'Last Updated',
     editLinkText: '在 GitHub 上编辑此页',
+    // - 更新时间
+    lastUpdated: true,
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
