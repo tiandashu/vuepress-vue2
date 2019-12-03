@@ -9,7 +9,7 @@
 
 ```bash
 # clone the project
-git clone https://github.com/tiandashu/hello-vue2-doc.git
+git clone https://github.com/tiandashu/hello-vue2.git
 
 # install dependency
 npm install
