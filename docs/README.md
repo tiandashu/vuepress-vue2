@@ -17,7 +17,7 @@ features:
     details: 内建业界通用的国际化方案
   - title: 主题
     details: 支持多种动态换肤功能
-footer: MIT Licensed | Copyright © 2017-present PanJiaChen
+footer: MIT Licensed | Copyright © 2017-present tiandashu
 ---
 
 
