@@ -22,7 +22,7 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
-    // - 更新时间
+    // - 更新时间 git提交的时间
     lastUpdated: true,
     nav: [
       { text: '首页', link: '/' },
