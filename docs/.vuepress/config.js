@@ -15,10 +15,10 @@ module.exports = {
     smoothScroll: true,
     // - git仓库和编辑链接
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-    repo: 'tiandashu/hello-vue2',
+    repo: 'tiandashu/vue2-quickStart',
     repoLabel: '查看源码',
     // 当前项目配套的文档仓库
-    docsRepo: 'tiandashu/hello-vue2-doc',
+    docsRepo: 'tiandashu/vue2-quickStart-doc',
     docsDir: 'docs',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
@@ -34,26 +34,23 @@ module.exports = {
             text: 'vue生态',
             link: '/vue/index',
             items: [
-              { text: 'vue', link: '/vue/index' },
-              { text: 'vantUI', link: '/vuex/index' },
-              { text: 'vueRouter', link: '/vuex/index' },
-              { text: 'vuex', link: '/vuex/index' },
-              { text: 'vueSSR', link: '/vuex/index' },
-              { text: 'vuePress', link: '/vuex/index' },
-              { text: 'vuex', link: '/vuex/index' },
+              { text: 'Vue', link: '/vue/index' },
+              { text: 'Vue Router', link: '/vuerouter/index' },
+              { text: 'Vuex', link: '/vuex/index' },
+              { text: 'Vue CLI', link: '/vuecli/index' },
+              { text: 'Vue Loader', link: '/vueloader/index' },
+              { text: 'VueSSR', link: '/vuessr/index' },
+              { text: 'vuePress', link: '/vuepress/index' },
+              { text: 'Devtools', link: '/vuex/index' },
             ]
           },
           {
             text: '第三方配置',
             link: '/vue/index',
             items: [
-              { text: 'vue', link: '/vue/index' },
+              { text: 'reset.css', link: '/vue/index' },
               { text: 'vantUI', link: '/vuex/index' },
-              { text: 'vueRouter', link: '/vuex/index' },
-              { text: 'vuex', link: '/vuex/index' },
-              { text: 'vueSSR', link: '/vuex/index' },
-              { text: 'vuex', link: '/vuex/index' },
-              { text: 'vuex', link: '/vuex/index' },
+              { text: 'webpack', link: '/vuex/index' },
             ]
           },
         ]
@@ -76,7 +73,7 @@ module.exports = {
     // 分组：效果就是需要通过链接跳转到对应的分组，当前页面智展示对应分组的headers导航
     sidebar: {
       '/guide/': [
-        '',
+        ['','开始']
       ],
       '/vue/': [
         '',

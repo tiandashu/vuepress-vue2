@@ -25,7 +25,7 @@ footer: MIT Licensed | Copyright © 2017-present tiandashu
 
 ```bash
 # clone the project
-git clone https://github.com/tiandashu/hello-vue2.git
+git clone https://github.com/tiandashu/vue2-quickStart.git
 
 # install dependency
 npm install
