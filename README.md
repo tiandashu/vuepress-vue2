@@ -1,15 +1,15 @@
-### hello-vue2-doc
-> [hello-vue2](https://github.com/tiandashu/hello-vue2.git)的项目文档，该项目收集整理了**vue**相关的知识和技巧
+### vue2-quickStart-doc
+> [vue2-quickStart](https://github.com/tiandashu/vue2-quickStart.git)的项目文档，该项目收集整理了vue相关的知识和技巧
 
 ### 部署地址
-[Online](http://tl.tianaitian.com/hello-vue2-doc/)
+[Online](http://tl.tianaitian.com/vue2-quickStart-doc/)
 
 
-### 开发
+### 源码
 
 ```bash
 # clone the project
-git clone https://github.com/tiandashu/hello-vue2.git
+git clone https://github.com/tiandashu/vue2-quickStart.git
 
 # install dependency
 npm install
