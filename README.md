@@ -1,4 +1,4 @@
-### vue2-quickStart-doc
+### 说明
 > [vue2-quickStart](https://github.com/tiandashu/vue2-quickStart.git)的项目文档，该项目收集整理了vue相关的知识和技巧
 
 ### 部署地址
