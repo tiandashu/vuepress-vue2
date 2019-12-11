@@ -1,7 +1,7 @@
 module.exports = {
-  base: '/vue2-QuickStart-doc/',
-  title: 'vue2-QuickStart',
-  description: '基于vue2的项目配置',
+  base: '/vue2-quickStart-doc/',
+  title: 'vue2-quickStart',
+  description: '简单 快速 齐全',
   head: [
     [
       'link',
@@ -24,47 +24,7 @@ module.exports = {
     editLinkText: '在 GitHub 上编辑此页',
     // - 更新时间 git提交的时间
     lastUpdated: '最后更新',
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '指南', link: '/guide/' },
-      {
-        text: '配置与使用',
-        items: [
-          {
-            text: 'vue生态',
-            link: '/vue/index',
-            items: [
-              { text: 'Vue', link: '/vue/index' },
-              { text: 'Vue Router', link: '/vuerouter/index' },
-              { text: 'Vuex', link: '/vuex/index' },
-              { text: 'Vue CLI', link: '/vuecli/index' },
-              { text: 'Vue Loader', link: '/vueloader/index' },
-              { text: 'VueSSR', link: '/vuessr/index' },
-              { text: 'vuePress', link: '/vuepress/index' },
-              { text: 'Devtools', link: '/vuex/index' },
-            ]
-          },
-          {
-            text: '第三方配置',
-            link: '/vue/index',
-            items: [
-              { text: 'reset.css', link: '/vue/index' },
-              { text: 'vantUI', link: '/vuex/index' },
-              { text: 'webpack', link: '/vuex/index' },
-            ]
-          },
-        ]
-      },
-      {
-        text: '优质资源',
-        items: [
-          { text: '文章', link: '/language/chinese/' },
-          { text: '项目', link: '/language/english/' },
-          { text: '面试', link: '/language/english/' },
-        ]
-      },
-      // { text: 'github', link: 'https://github.com/tiandashu/hello-vue2.git' },
-    ],
+    nav: require('./nav.js'),
     // 效果就是在当前页面展示所有导航
     // sidebar:[
     //   ['/guide/','指南'],
@@ -73,16 +33,38 @@ module.exports = {
     // 分组：效果就是需要通过链接跳转到对应的分组，当前页面智展示对应分组的headers导航
     sidebar: {
       '/guide/': [
-        ['','开始']
+        ['','开始'],
+        ['catalog','项目结构'],
+        ['style-guide','风格指南'],
       ],
       '/vue/': [
-        '',
-        ['foo', 'foo']
+        ['','vue整理']
       ],
-      '/vuex/': [
+      '/zoology/': getZoologySidebar('官方生态', 'ok'),
+      '/config/': [
         '',
-        ['foo', 'foo']
+        ['debug','调试'],
+        ['reset','样式初始化'],
       ],
     }
   }
+}
+// 官方生态
+function getZoologySidebar (groupA, introductionA) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        '',
+        ['vuex','Vuex'],
+        'vue-cli',
+        'vue-loader',
+        'vue-press',
+        'vue-router',
+        'vue-ssr',
+      ]
+    }
+  ]
 }
