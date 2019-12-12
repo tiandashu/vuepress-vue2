@@ -35,35 +35,49 @@ module.exports = {
       '/guide/': [
         ['','开始'],
         ['catalog','项目结构'],
-        ['style-guide','风格指南'],
+        ['style-guide','vue风格指南'],
       ],
       '/vue/': [
         ['','vue整理']
       ],
-      '/zoology/': getZoologySidebar('官方生态', 'ok'),
-      '/config/': [
-        '',
-        ['debug','调试'],
-        ['reset','样式初始化'],
-      ],
+      '/zoology/': getZoologySidebar('官方生态'),
+      '/config/': getScssSidebar('项目配置'),
     }
   }
 }
 // 官方生态
-function getZoologySidebar (groupA, introductionA) {
+function getZoologySidebar (groupA) {
   return [
     {
       title: groupA,
       collapsable: false,
-      sidebarDepth: 2,
+      sidebarDepth: 1,
       children: [
-        '',
         ['vuex','Vuex'],
-        'vue-cli',
-        'vue-loader',
-        'vue-press',
-        'vue-router',
-        'vue-ssr',
+        ['vue-cli','Vue CLI'],
+        ['vue-loader', 'Vue Loader'],
+        ['vue-press', 'Vue Press'],
+        ['vue-router', 'Vue Router'],
+        ['vue-ssr', 'Vue SSR'],
+      ]
+    }
+  ]
+}
+
+// 项目配置
+function getScssSidebar (groupA) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+        ['debug','调试'],
+        ['scss','scss'],
+        ['reset', '样式初始化'],
+        ['mobile', '移动端配置'],
+        ['vant', 'vant'],
+        ['elementui', 'elementui'],
       ]
     }
   ]

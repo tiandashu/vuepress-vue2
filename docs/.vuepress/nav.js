@@ -18,12 +18,14 @@ module.exports = [
         ]
       },
       {
-        text: '开发配置',
+        text: '项目配置',
         items: [
           { text: '调试', link: '/config/debug' },
+          { text: 'scss', link: '/config/scss' },
           { text: '样式初始化', link: '/config/reset' },
+          { text: '移动端配置', link: '/config/mobile' },
           { text: 'vantUI', link: '/config/vant' },
-          { text: 'webpack', link: '/config/webpack' },
+          { text: 'elementUI', link: '/config/vant' },
         ]
       },
     ]
@@ -31,9 +33,9 @@ module.exports = [
   {
     text: '优质资源',
     items: [
-      { text: '文章', link: '/language/chinese/' },
-      { text: '项目', link: '/language/english/' },
-      { text: '面试', link: '/language/english/' },
+      { text: '文章', link: '/resource/article/' },
+      { text: '项目', link: '/resource/project/' },
+      { text: '面试', link: '/resource/interview/' },
     ]
   },
   // { text: 'github', link: 'https://github.com/tiandashu/hello-vue2.git' },
