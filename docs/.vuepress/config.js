@@ -41,7 +41,7 @@ module.exports = {
         ['','vue整理']
       ],
       '/zoology/': getZoologySidebar('官方生态'),
-      '/config/': getScssSidebar('项目配置'),
+      '/config/': getConfigSidebar('项目配置'),
     }
   }
 }
@@ -65,7 +65,7 @@ function getZoologySidebar (groupA) {
 }
 
 // 项目配置
-function getScssSidebar (groupA) {
+function getConfigSidebar (groupA) {
   return [
     {
       title: groupA,

@@ -32,3 +32,6 @@
 - 默认在该文件下存放的资源，webpack不做处理直接拷贝
 - 项目中的引用路径使用绝对路径 `/static/`
 - 如果使用的不是绝对路径，比如 `static` 或 `./statitc` 或 `url: require('/static/..')` 都会被webapck处理
+
+## 结构规范
+为了便于维护，将api、router、pages模块一一对应
