@@ -12,7 +12,7 @@ module.exports = [
           { text: 'Vue Router', link: '/zoology/vue-router' },
           { text: 'Vue CLI', link: '/zoology/vue-cli' },
           { text: 'Vue Loader', link: '/zoology/vue-loader' },
-          { text: 'VueSSR', link: '/zoology/vuessr' },
+          { text: 'Vue SSR', link: '/zoology/vuessr' },
           { text: 'vuePress', link: '/zoology/vuepress' },
           { text: 'Devtools', link: '/zoology/devtools' },
         ]

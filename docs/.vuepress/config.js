@@ -54,11 +54,11 @@ function getZoologySidebar (groupA) {
       sidebarDepth: 1,
       children: [
         ['vuex','Vuex'],
+        ['vue-router', 'Vue Router'],
         ['vue-cli','Vue CLI'],
         ['vue-loader', 'Vue Loader'],
-        ['vue-press', 'Vue Press'],
-        ['vue-router', 'Vue Router'],
         ['vue-ssr', 'Vue SSR'],
+        ['vue-press', 'VuePress'],
       ]
     }
   ]
