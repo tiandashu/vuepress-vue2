@@ -1,7 +1,8 @@
 ## 安装
 ```bash
 npm install sass-loader node-sass --save-dev
-<style lang="sass">
+
+<style lang="scss">
   /* write sass here */
 </style>
 ```
@@ -23,12 +24,12 @@ sass-loader 默认解析 SCSS 语法。如果你想要使用 Sass 语法，你�
 "sass-loader": "^8.0.0"，更换成了 "sass-loader": "^7.3.1",
 :::
 
-## 加载一个全局设置文件
-在每个组件里加载一个设置文件，而无需每次都将其显式导入，是一个常见的需求。比如为所有组件全局使用 scss 变量。为了达成此目的：
-```bash
-npm install sass-resources-loader --save-dev
-```
+## 设置一个全局文件
+解决每次使用通用scss文件都要在组件中显示引入的问题，配置成全局的scss文件无需在组件中引入，直接使用即可
+
 ```js
+npm install sass-resources-loader --save-dev
+
 // build/utils.js
 // 为了避免编译重复，建议只包含变量、mixins 等
 // resources 也可以是一个数组，配置多个全局样式
@@ -41,25 +42,22 @@ scss: generateLoaders('sass').concat(
   }
 ),
 ```
-::: warning
-配置成全局的scss文件无需在main.js中全局引入，直接使用即可
-:::
 
-## 代码
 ```html
 <template>
-  <div class="scss-page">
-    {{varscss}}
+  <div class="scss__page">
+    <h3>this is scss-page</h3>
+    <div class="scss__demo"></div>
   </div>
 </template>
 
 <script>
   // 需要单独引入
-  import varscss from '@/assets/styles/_var.scss';
+  import varscss from '@/assets/styles/varibles.scss';
   export default {
     name: 'ScssPage',
     data(){
-      varscss
+      varscss: varscss
     },
     mounted(){
       console.log(varscss)
@@ -68,9 +66,41 @@ scss: generateLoaders('sass').concat(
 </script>
 
 <style lang="scss">
-// 无需引入，直接使用
-.scss-page{
-  color: $red;
+/* 配置sass-resources-loader后无需引入直接使用 */
+/* @import '~@/assets/styles/varibles.scss'; */
+.scss__page{
+  .scss__demo{
+    width: 300px;
+    height: 300px;
+    background-color: $menuActiveText;
+  }
 }
 </style>
 ```
+
+## scss常用语法
+
+### 局部文件
+scss文件以下划线`_`开头命名的称为局部文件，不会在编译的时候单独输出，但是引入的时候写不写`_`都行
+
+### @extend、@include
+- @extend：主要用来共享样式，精简代码
+- @include: 使用@mixin中的代码
+```scss
+@import '~@/assets/styles/mixins.scss';
+.text {
+  font-size: 18px;
+  color: red;
+}
+.scss__page {
+  .scss__demo {
+    width: 300px;
+    height: 300px;
+    background-color: $menuActiveText;
+    @extend .text;
+    @include cutline;
+  }
+}
+```
+
+

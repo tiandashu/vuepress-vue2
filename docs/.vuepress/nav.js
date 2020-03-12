@@ -12,8 +12,8 @@ module.exports = [
           { text: 'Vue Router', link: '/zoology/vue-router' },
           { text: 'Vue CLI', link: '/zoology/vue-cli' },
           { text: 'Vue Loader', link: '/zoology/vue-loader' },
-          { text: 'Vue SSR', link: '/zoology/vuessr' },
-          { text: 'vuePress', link: '/zoology/vuepress' },
+          { text: 'Vue SSR', link: '/zoology/vue-ssr' },
+          { text: 'vuePress', link: '/zoology/vue-press' },
           { text: 'Devtools', link: '/zoology/devtools' },
         ]
       },
@@ -22,12 +22,19 @@ module.exports = [
         items: [
           { text: '调试', link: '/config/debug' },
           { text: 'scss', link: '/config/scss' },
-          { text: '样式初始化', link: '/config/reset' },
+          { text: '样式设置', link: '/config/styles' },
           { text: '移动端配置', link: '/config/mobile' },
           { text: 'vantUI', link: '/config/vant' },
           { text: 'elementUI', link: '/config/vant' },
         ]
       },
+    ]
+  },
+  {
+    text: 'vue进阶',
+    items: [
+      { text: 'vue源码', link: '/resource/article/' },
+      { text: '自动部署', link: '/resource/project/' },
     ]
   },
   {

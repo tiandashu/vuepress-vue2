@@ -24,7 +24,7 @@ vue-loader 是一个 webpack 的 loader，可以将用下面这个格式编写�
 </style>
 ```
 
-如果配置了scss等预处理器，使用 /deep/
+如果配置了scss等预处理器，使用 /deep/ 或者 ::v-deep
 ```html
 <style scoped lang="scss">
 .a /deep/ .b { /* ... */ }

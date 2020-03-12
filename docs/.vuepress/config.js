@@ -59,6 +59,7 @@ function getZoologySidebar (groupA) {
         ['vue-loader', 'Vue Loader'],
         ['vue-ssr', 'Vue SSR'],
         ['vue-press', 'VuePress'],
+        ['devtools', 'Devtools'],
       ]
     }
   ]
@@ -74,7 +75,7 @@ function getConfigSidebar (groupA) {
       children: [
         ['debug','调试'],
         ['scss','scss'],
-        ['reset', '样式初始化'],
+        ['styles', '样式设置'],
         ['mobile', '移动端配置'],
         ['vant', 'vant'],
         ['elementui', 'elementui'],

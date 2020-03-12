@@ -257,8 +257,37 @@ modules: {
 }
 ```
 ## 插件
+vuex插件每次 mutation 之后调用
 
-### v-model处理
+```js
+// plugin.js
+import store from '../index'
+// 可以利用插件拦截，执行某些逻辑
+let loginplugin = store => {
+  store.subscribe((mutation, state) => {
+    // mutation 的格式为 { type, payload }
+    // vuex插件每次 mutation 之后调用
+    console.log('-----vuex 插件日志------')
+    console.log(mutation)
+    console.log(state)
+    console.log('-----vuex 插件日志 end------')
+  })
+}
+export default loginplugin
+
+// store.js
+const store = new Vuex.Store({
+  state: {},
+  getters: {},
+  mutations: {},
+  actions: {},
+  modules: {},
+  plugins: [loginPlugin]
+})
+
+```
+
+## 表单 v-model处理
 ```
 <input v-model="message">
 computed: {

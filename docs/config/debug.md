@@ -31,4 +31,9 @@ if (process.env.NODE_ENV === 'development') {
 }
 ```
 ## 移动端调试流程
-待续...
+1. 本地项目使用ip启动而不是localhost
+2. 确保手机和本地项目在一个局域网环境中
+3. 安装Charles并开启代理，端口8888
+4. 手机WiFi设置手动代理并安装证书
+5. 配置完成，开始调试
+6. [Charles](https://blog.csdn.net/forebe/article/details/98945139)

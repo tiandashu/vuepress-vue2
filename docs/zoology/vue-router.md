@@ -86,4 +86,8 @@ beforeRouteLeave (to, from, next) {
 2.3 动态生成路由
 `router.addRoutes([])`
 
+:::tip
+如果项目结构较大，建议划分路由模块管理
+:::
+
 
