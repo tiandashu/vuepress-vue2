@@ -37,7 +37,7 @@ module.exports = {
         ['catalog','项目结构'],
         ['style-guide','vue风格指南'],
       ],
-      '/zoology/': getZoologySidebar('官方生态'),
+      '/zoology/': getZoologySidebar('vue生态'),
       '/config/': getConfigSidebar('项目配置'),
     }
   }

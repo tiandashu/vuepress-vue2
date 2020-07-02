@@ -27,13 +27,13 @@ module.exports = [
           { text: 'elementUI', link: '/config/vant' },
         ]
       },
-    ]
-  },
-  {
-    text: 'vue进阶',
-    items: [
-      { text: 'vue源码', link: '/resource/article/' },
-      { text: '自动部署', link: '/resource/project/' },
+      {
+        text: '项目部署',
+        items: [
+          { text: 'Nginx', link: '/resource/article/' },
+          { text: 'Node', link: '/resource/project/' },
+        ]
+      },
     ]
   },
   {
