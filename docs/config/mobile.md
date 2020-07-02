@@ -134,11 +134,33 @@ npm install postcss-pxtorem -D
 }
 ```
 
-## 百分比布局
-待续...
-
-## 媒体查询
-待续...
-
 ## vw布局
-待续...
+```js
+npm install -D postcss-px-to-viewport
+
+var postcssLoader = {
+  loader: 'postcss-loader',
+  options: {
+    plugins: [
+      require('autoprefixer')({
+        browsers: ['last 5 versions']
+      }),
+      // require('postcss-pxtorem')({
+      // 	'rootValue': 75,
+      // 	propList: ['*']
+      // })
+      require('postcss-px-to-viewport')({
+        viewportWidth: 750, // 视窗宽度
+        viewportHeight: 1334,  // 视窗高度
+        unitPrecision: 6, 	// 保留小数
+        viewportUnit: 'vw', // 选择单位
+        selectorBlackList: [], // 不转换的类
+        minPixelValue: 1, // 最小单位
+        mediaQuery: false, 	// 排除媒体查询
+        landscapeUnit: 'vh', // 横屏时单位
+        fontViewportUnit: 'vw', // 字体使用的单位
+      })
+    ]
+  }
+};
+```

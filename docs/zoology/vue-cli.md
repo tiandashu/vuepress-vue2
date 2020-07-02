@@ -6,9 +6,22 @@ Vue CLI 是一个基于 Vue.js 进行快速开发的完整系统，[详细解读
 
 ## 设置环境
 `vue-cli`默认只提供了`dev`和`prod`两种环境。但其实正真的开发流程可能还会多一个`sit`或者`stage`环境
-- 在config/*.env.js中直接配置，注意引号。
-- 可以直接通过`process.env.设置变量`来访问
-待完善...
+```bash
+# npm 脚本重新指定 NODE_ENV
+"build:pre": "NODE_ENV=pre node build/build.js"
+"dev:pre": "NODE_ENV=pre webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
+
+# config目录下新增对应的文件
+pre.env.js 中改变对应的变量
+
+# 判断process.env.NODE_ENV === 'pre'
+# webpack.dev.conf.js 或 webpack.prod.conf.js
+const env = process.env.NODE_ENV === 'testing'
+  ? require('../config/test.env')
+  : process.env.NODE_ENV === 'pre' 
+    ? require('../config/pre.env')
+    : require('../config/prod.env')
+```
 
 ## 浏览器兼容性
 ``` bash
@@ -62,7 +75,21 @@ npm install @vue/babel-preset-jsx @vue/babel-helper-vue-jsx-merge-props
 - regExp：以及一个匹配文件的正则表达式
 
 返回值：返回的是一个函数,并且这个函数有3个属性
-- 待完善...
+- resolve 是一个函数，它返回请求被解析后得到的模块 id
+- keys 也是一个函数，它返回一个数组，由所有可能被上下文模块处理的请求组成
+- id 是上下文模块里面所包含的模块 id. 它可能在你使用 module.hot.accept 的时候被用到
+
+示例：
+```js
+// 注册全局组件
+const requireAll = context => context.keys().map(context);
+const component = require.context('./components', false, /\.vue$/);   // false 不遍历子目录，true遍历子目录
+requireAll(component).forEach(({default:item}) => {
+	console.log(item)
+	Vue.component(`wb-${item.name}`, item);
+});
+
+```
 
 ## 打包设置
 ``` bash

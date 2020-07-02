@@ -31,7 +31,7 @@ new Vue({
 ```
 params: 一般在设置动态路由的时候用到
 query: 对应url中?后面的`key=val`
-meta: 在定义route的时候人为配置
+meta: 在定义route的时候手动配置
 ```
 - 区分 router 和 route
 ```
@@ -84,7 +84,11 @@ beforeRouteLeave (to, from, next) {
 ```
 
 2.3 动态生成路由
-`router.addRoutes([])`
+
+```
+# 一般结合权限进行路由控制
+router.addRoutes([])
+```
 
 :::tip
 如果项目结构较大，建议划分路由模块管理

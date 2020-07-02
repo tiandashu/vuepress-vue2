@@ -217,7 +217,7 @@ const moduleA = {
 }
 ```
 ### 命名空间 namespaced: true
-- 模块内部的 state 即使不设置**namespaced: true**是注册在模块局部的
+- 模块内部的 state 即使不设置**namespaced: true** 也是注册在模块局部的
 - 默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间
 - 启用了命名空间的 getter 和 action 会收到局部化的 getter，dispatch 和 commit
 - 在带命名空间的模块内访问全局内容

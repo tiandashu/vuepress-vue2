@@ -7,7 +7,6 @@ module.exports = [
       {
         text: 'vue生态',
         items: [
-          { text: 'Vue', link: '/vue/index' },
           { text: 'Vuex', link: '/zoology/vuex' },
           { text: 'Vue Router', link: '/zoology/vue-router' },
           { text: 'Vue CLI', link: '/zoology/vue-cli' },
@@ -40,9 +39,8 @@ module.exports = [
   {
     text: '优质资源',
     items: [
-      { text: '文章', link: '/resource/article/' },
-      { text: '项目', link: '/resource/project/' },
-      { text: '面试', link: '/resource/interview/' },
+      { text: '精彩文章', link: '/resource/article/' },
+      { text: '开源项目', link: '/resource/project/' },
     ]
   },
   // { text: 'github', link: 'https://github.com/tiandashu/hello-vue2.git' },

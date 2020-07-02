@@ -1,9 +1,5 @@
-<!--
- * @Descripttion: 
- * @version: 
- * @Author: tianlu.tian
- * @Date: 2019-12-11 21:54:41
- * @LastEditors: tianlu.tian
- * @LastEditTime: 2020-05-27 19:28:11
---> 
-# vant
+### vant
+> 有赞团队出品的一款优秀的移动端组件库
+
+### 使用
+[vant官网](https://youzan.github.io/vant/#/zh-CN/quickstart)

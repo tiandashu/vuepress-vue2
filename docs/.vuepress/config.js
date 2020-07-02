@@ -1,6 +1,6 @@
 module.exports = {
   base: '/vue2-quickStart-doc/',
-  title: 'vue2-quickStart',
+  title: 'qs',
   description: '简单 快速 齐全',
   head: [
     [
@@ -36,9 +36,6 @@ module.exports = {
         ['','开始'],
         ['catalog','项目结构'],
         ['style-guide','vue风格指南'],
-      ],
-      '/vue/': [
-        ['','vue整理']
       ],
       '/zoology/': getZoologySidebar('官方生态'),
       '/config/': getConfigSidebar('项目配置'),
