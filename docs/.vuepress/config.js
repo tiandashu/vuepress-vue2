@@ -1,7 +1,7 @@
 module.exports = {
   base: '/vue2-quickStart-doc/',
-  title: 'qs',
-  description: '简单 快速 齐全',
+  title: 'vue2-qs',
+  description: 'quick start',
   head: [
     [
       'link',
@@ -15,8 +15,8 @@ module.exports = {
     smoothScroll: true,
     // - git仓库和编辑链接
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-    repo: 'tiandashu/vue2-quickStart',
-    repoLabel: '查看源码',
+    repo: 'tiandashu/vue2-quickStart-doc',
+    repoLabel: 'github',
     // 当前项目配套的文档仓库
     docsRepo: 'tiandashu/vue2-quickStart-doc',
     docsDir: 'docs',

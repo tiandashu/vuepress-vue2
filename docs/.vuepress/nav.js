@@ -27,13 +27,6 @@ module.exports = [
           { text: 'elementUI', link: '/config/vant' },
         ]
       },
-      {
-        text: '项目部署',
-        items: [
-          { text: 'Nginx', link: '/resource/article/' },
-          { text: 'Node', link: '/resource/project/' },
-        ]
-      },
     ]
   },
   {
