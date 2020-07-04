@@ -14,8 +14,8 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f "git@github.com:tiandashu/vue2-quickStart-doc.git" master:gh-pages
+git push -f "git@github.com:tiandashu/vuepress-vue2.git" master:gh-pages
 
-echo '发布完成，请访问http://tl.tianaitian.com/vue2-quickStart-doc/'
+echo '发布完成，请访问http://doc.tianaitian.com/vuepress-vue2/'
 
 cd -
