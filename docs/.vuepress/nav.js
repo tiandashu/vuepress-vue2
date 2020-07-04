@@ -24,7 +24,7 @@ module.exports = [
           { text: '样式设置', link: '/config/styles' },
           { text: '移动端配置', link: '/config/mobile' },
           { text: 'vantUI', link: '/config/vant' },
-          { text: 'elementUI', link: '/config/vant' },
+          { text: 'elementUI', link: '/config/elementui' },
         ]
       },
     ]

@@ -16,7 +16,7 @@ footer: MIT Licensed | Copyright © 2017-present tiandashu
 ---
 
 ## 快速上手
-> 该项目是对vue2-quickStart-doc的具体实践
+> 该项目是对vuepress-vue2的具体实践
 ```bash
 # clone the project
 git clone https://github.com/tiandashu/vue2-quickStart.git
