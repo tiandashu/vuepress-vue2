@@ -39,6 +39,10 @@ module.exports = {
       ],
       '/zoology/': getZoologySidebar('vue生态'),
       '/config/': getConfigSidebar('项目配置'),
+      '/resource/': [
+        ['article','精彩文章'],
+        ['project','开源项目'],
+      ],
     }
   }
 }
