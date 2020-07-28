@@ -94,4 +94,28 @@ router.addRoutes([])
 如果项目结构较大，建议划分路由模块管理
 :::
 
+3、history 在nginx上的配置
 
+vue.config.js 配置成相对路径
+```js
+// 如果nginx配置了location，注意相对位置的层级
+publicPath: './',  // ../
+```
+
+nginx.conf
+```bash
+server {
+  listen       8080;
+  server_name  localhost;
+
+  # 配置成打包后的路径
+  root /Users/tian/vue-history/dist;
+
+  # / 对应 publicPath: './'
+  # /vue/ 对应 publicPath: '../'
+  location /vue/ { 
+    # history 模式
+    try_files $uri $uri/ /index.html;
+  }
+}
+```
