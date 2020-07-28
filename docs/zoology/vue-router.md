@@ -94,12 +94,31 @@ router.addRoutes([])
 如果项目结构较大，建议划分路由模块管理
 :::
 
-3、history 在nginx上的配置
+3、history模式配置
 
 vue.config.js 配置成相对路径
 ```js
 // 如果nginx配置了location，注意相对位置的层级
 publicPath: './',  // ../
+```
+
+vue-router 配置base
+```js
+export default new VueRouter({
+  mode: 'history',
+  // 默认 /, base的路径要和nginx中保持一致，详情如下
+  base: '/vue/',
+  routes: [
+    {
+      path: '/b',
+      component: pageB
+    },
+    {
+      path: '/c',
+      component: pageC
+    },
+  ]
+})
 ```
 
 nginx.conf
@@ -111,8 +130,8 @@ server {
   # 配置成打包后的路径
   root /Users/tian/vue-history/dist;
 
-  # / 对应 publicPath: './'
-  # /vue/ 对应 publicPath: '../'
+  # / 对应 publicPath: './' ; vue-router 对应的base为 '/'
+  # /vue/ 对应 publicPath: '../' ; vue-router 对应的base为 '/vue/'
   location /vue/ { 
     # history 模式
     try_files $uri $uri/ /index.html;
