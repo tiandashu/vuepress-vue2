@@ -97,12 +97,14 @@ router.addRoutes([])
 3、history模式配置
 
 vue.config.js 配置成相对路径
+![vue.config.js](/his02.png)
 ```js
 // 如果nginx配置了location，注意相对位置的层级
 publicPath: './',  // ../
 ```
 
 vue-router 配置base
+![vue-router](/his01.png)
 ```js
 export default new VueRouter({
   mode: 'history',
@@ -122,6 +124,7 @@ export default new VueRouter({
 ```
 
 nginx.conf
+![nginx.conf](/his03.png)
 ```bash
 server {
   listen       8080;
